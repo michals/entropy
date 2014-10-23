@@ -1,4 +1,10 @@
-entropy
+Entropy
 =======
 
-Chrome App Memory Game
+Memory Game
+
+
+Chrome App Store
+----------------
+
+https://chrome.google.com/webstore/detail/onboaangjfpoclnakigcbhidcjgfmfef/
