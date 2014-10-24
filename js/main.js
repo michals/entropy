@@ -1,12 +1,34 @@
 document.addEventListener('DOMContentLoaded', function() {
 
-  var game = document.getElementById('game');
-  var cells = game.querySelectorAll('.board .cell');
+  var game = document.getElementById('game'),
+      cells = game.querySelectorAll('.board .cell'),
+      board = game.querySelector('.board');
 
   // window.board = new Board();
   var SIZE = 5;
   window.shown = new Array(SIZE*SIZE);
   window.guess = new Array(SIZE*SIZE);
+
+  function resize() {
+    board.style.width = '';
+    board.style.height = '';
+    board.style.margin = '';
+    var w = board.offsetWidth,
+        h = board.offsetHeight;
+    if (w < h) {
+      board.style.height = w + 'px';
+    } else {
+      board.style.marginLeft = 'auto';
+      board.style.marginRight = 'auto';
+      board.style.width = h + 'px';
+    }
+  }
+
+  window.addEventListener('resize', function(e){
+    resize();
+  });
+
+  resize();
 
   var MODE_LOOK = "look", MODE_GUESS = "GUESS", mode = MODE_LOOK;
 

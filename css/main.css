@@ -41,13 +41,16 @@ body {
   border-color: #777;
 }
 .controls {
-  align-self: center;
-  display: flex;
-  align-items: center;
   width: calc( 100% - 30px );
+  height: 60px;
   margin: 15px;
 }
 .controls .message {
-  flex: 1 1;
   text-align: center;
+  height: 2em;
+}
+.controls .buttons {
+  display: flex;
+  justify-content: space-around;
+  margin: 15px;
 }
